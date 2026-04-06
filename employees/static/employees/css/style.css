@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #0d0d0d;
+    color: #e5e5e5;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    background: #020617;
+    padding: 20px;
+    border-right: 1px solid #1e293b;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+}
+.sidebar img {
+    width: 100px;       
+    height: auto;
+    display: block;
+    margin-bottom: 15px ;          
+}
+
+
+.sidebar h3 {
+    color: #e5e6e6;
+}
+.upload-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-item {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.chat-item:hover {
+    background: #1a1a1a;
+}
+
+
+.main {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+.user {
+    text-align: right;
+    margin: 10px;
+    color: #4fc3f7;
+}
+
+.bot {
+    text-align: left;
+    margin: 10px;
+    color: #00ff9f;
+}
+
+.input-box {
+    display: flex;
+    padding: 15px;
+    background: #111;
+    border-top: 1px solid #222;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    margin-left: 10px;
+    background: #00ff9f;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00cc7a;
+}
+.bubble {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 60%;
+}
+
+.user-bubble {
+    background: #1e3a5f;
+}
+
+.bot-bubble {
+    background: #1a1a1a;
+    border: 1px solid #00ff9f;
+}
+

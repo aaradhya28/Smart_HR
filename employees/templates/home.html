@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HR AI Assistant</title>
+    <link rel="stylesheet" href="{% static 'employees/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Monodisplay=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  
+    <div class="sidebar">
+    <img src="{% static 'uploads/smarthr-removebg-preview.png' %}" alt="Logo" class="logo">
+    <a href="{% url 'upload' %}">
+    <button class="upload-btn">➕ Upload CSV</button>
+</a>
+    <h3> Chats</h3>
+
+
+        {% for chat in chats %}
+            <div class="chat-item">
+                {{ chat.user|truncatewords:5 }}
+            </div>
+        {% endfor %}
+    </div>
+
+    
+    <div class="main">
+
+        
+        <div class="chat-box">
+            {% for chat in chats %}
+            <div class="user">
+        <span class="bubble user-bubble">{{ chat.user }}</span>
+    </div>
+
+    <div class="bot">
+        <span class="bubble bot-bubble">{{ chat.bot }}</span>
+</div>
+            {% endfor %}
+        </div>
+
+        <form method="post" class="input-box">
+            {% csrf_token %}
+            <input type="text" name="query" placeholder="Ask HR Assistant..." required>
+            <button type="submit">Send</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

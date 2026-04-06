@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'employees/css/style.css' %}">
+
+<div style="padding: 40px;">
+    <h2>📂 Upload Employee CSV</h2>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" accept=".csv,.xlsx,.xls">
+        <button type="submit">Upload</button>
+    </form>
+</div>
