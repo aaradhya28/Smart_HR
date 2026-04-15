@@ -9,9 +9,9 @@ body {
 
 .sidebar {
     width: 25%;
-    background: #020617;
+    background: #00000080;
     padding: 20px;
-    border-right: 1px solid #1e293b;
+    border-right: 1px solid #0705059a;
     display: flex;
     flex-direction: column;
     align-items: flex-start;  
@@ -43,11 +43,14 @@ body {
     padding: 10px;
     border-bottom: 1px solid #222;
     cursor: pointer;
-    color: #ccc;
+    color: #000000 !important;
+    background: #ffffff !important;
+    border-radius: 6px;
+    margin-bottom: 8px;
 }
 
 .chat-item:hover {
-    background: #1a1a1a;
+    background: #f3f4f6 !important;
 }
 
 
@@ -68,7 +71,7 @@ body {
 .user {
     text-align: right;
     margin: 10px;
-    color: #4fc3f7;
+    color: #ffffff;
 }
 
 .bot {
@@ -111,7 +114,8 @@ button:hover {
 }
 
 .user-bubble {
-    background: #1e3a5f;
+    background: #000000 !important;
+    color: #ffffff !important;
 }
 
 .bot-bubble {
